@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Herbal Haven</title>
+    <style>
+        :root {
+            --primary-green: #2ecc71;
+            --white: #ffffff;
+            --secondary-text: #666666;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .btn-primary {
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .herb-card {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .herb-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .herb-card-image {
+            height: 200px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-green);
+        }
+        
+        .herb-card-content {
+            padding: 1.5rem;
+        }
+        
+        .herb-card h3 {
+            color: var(--primary-green);
+            margin-bottom: 0.5rem;
+        }
+        
+        .scientific-name {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .herb-card p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .herb-card-link {
+            display: inline-block;
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .herb-card-link:hover {
+            color: #27ae60;
+        }
+        
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header style="background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); padding: 1rem 0;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <h1 style="color: var(--primary-green); margin: 0;">🌿 Herbal Haven</h1>
+        </div>
+    </header>
+
+    <div class="hero">
+        <h2>Welcome to Herbal Haven</h2>
+        <p>Discover the healing power of nature with our comprehensive guide to herbal remedies</p>
+    </div>
+
+    <div class="container">
+        <section class="quick-links">
+            <h2 class="text-center" style="color: var(--primary-green); margin-bottom: 2rem;">Quick Access</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <a href="/catalogue.php" class="btn-primary" style="text-align: center; padding: 2rem; display: block; text-decoration: none;">
+                    <h3 style="margin-bottom: 0.5rem;">📚 Browse Catalogue</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.9;">Explore our complete collection of herbs</p>
+                </a>
+                <a href="/chat-assistant.php" class="btn-primary" style="text-align: center; padding: 2rem; display: block; text-decoration: none;">
+                    <h3 style="margin-bottom: 0.5rem;">💬 AI Assistant</h3>
+                    <p style="font-size: 0.9rem; opacity: 0.9;">Chat with our herbal expert</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="featured-herbs">
+            <h2 class="text-center" style="color: var(--primary-green); margin-bottom: 2rem;">Featured Herbs</h2>
+            <div class="card-grid">
+                <!-- Static example herb cards (would normally be dynamic) -->
+                <div class="herb-card">
+                    <div class="herb-card-image">
+                        🌿
+                    </div>
+                    <div class="herb-card-content">
+                        <h3>Echinacea</h3>
+                        <p class="scientific-name">Echinacea purpurea</p>
+                        <p>A popular herb known for its immune-boosting properties. Often used to prevent and treat the common cold...</p>
+                        <a href="/herb-detail.php?id=1" class="herb-card-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="herb-card">
+                    <div class="herb-card-image">
+                        🌼
+                    </div>
+                    <div class="herb-card-content">
+                        <h3>Chamomile</h3>
+                        <p class="scientific-name">Matricaria chamomilla</p>
+                        <p>Gentle herb famous for its calming effects. Commonly consumed as a tea to promote relaxation and sleep...</p>
+                        <a href="/herb-detail.php?id=2" class="herb-card-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="herb-card">
+                    <div class="herb-card-image">
+                        🌱
+                    </div>
+                    <div class="herb-card-content">
+                        <h3>Milk Thistle</h3>
+                        <p class="scientific-name">Silybum marianum</p>
+                        <p>Traditional liver-supporting herb. Contains silymarin, a compound with antioxidant and anti-inflammatory properties...</p>
+                        <a href="/herb-detail.php?id=3" class="herb-card-link">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="herb-card">
+                    <div class="herb-card-image">
+                        🌿
+                    </div>
+                    <div class="herb-card-content">
+                        <h3>Peppermint</h3>
+                        <p class="scientific-name">Mentha × piperita</p>
+                        <p>Versatile herb used for digestive health. The essential oil contains menthol, which can help soothe digestive issues...</p>
+                        <a href="/herb-detail.php?id=4" class="herb-card-link">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" style="background: var(--white); padding: 2rem; border-radius: 10px; margin: 3rem 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+            <h2 class="text-center" style="color: var(--primary-green); margin-bottom: 1rem;">About Herbal Haven</h2>
+            <p style="text-align: center; color: var(--secondary-text); max-width: 800px; margin: 0 auto;">
+                Herbal Haven is your trusted educational resource for learning about herbal remedies and natural wellness. 
+                Our platform combines traditional herbal knowledge with modern AI technology to help you discover safe and 
+                effective natural remedies. Remember, this information is for educational purposes only - always consult 
+                with a qualified healthcare provider before using any herbal remedies.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p>&copy; 2024 Herbal Haven. All rights reserved.</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Educational purposes only. Consult a healthcare provider before use.</p>
+        </div>
+    </footer>
+</body>
+</html>
